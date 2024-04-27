@@ -29,6 +29,40 @@ h1{font-family: cursive;}
 h2{font-family: cursive;}
 a{color: orange;}
 a:hover{color: red;}
+.my-button {
+  background-color: #4CAF50; /* Default color */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px; /* Rounded corners */
+  position: relative;
+  overflow: hidden;
+}
+
+.my-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.my-button:hover::before {
+  width: 0;
+  height: 0;
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSSCR55Z3V"></script>
@@ -123,7 +157,9 @@ a:hover{color: red;}
 </p>
 <center>
   <img src="images/1.png">
-  <a href="images/1.png" download="custom_filename">Download File</a>
+</center>
+<center>
+  <button class="my-button" href="images/1.png" download="custom_filename">Click me</button>
 </center>
 <p>🙊 Raft Wars embodies the thrilling fusion of strategy and action in the realm of shooting games. Set upon the unpredictable waves, players embark on a treasure-guarding odyssey alongside the intrepid duo, Martijn Kunst and TinyDobbins.</p>
 <center>
